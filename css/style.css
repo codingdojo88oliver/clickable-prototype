@@ -45,6 +45,11 @@ table .button {
 	justify-content:flex-end;
 }
 
+#search-product {
+	display:flex; 
+	justify-content:flex-start;	
+}
+
 #summary p {
 	margin-bottom: 5px;
 	text-align: right;
@@ -84,6 +89,10 @@ table .button {
 
 #filter-products input:nth-child(2) {
 	padding: 0 .5em !important;
+}
+
+#admin-products-list th:last-child {
+	text-align: center;
 }
 
 .admin-login {
