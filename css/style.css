@@ -135,3 +135,13 @@ div.product .other-images {
 .product-description {
 	margin-top: 90px;
 }
+
+.total-summary p {
+	margin-bottom: 5px;
+	font-style: italic;
+}
+
+.total-summary span {
+	font-weight: bold;
+	font-style: normal;
+}
