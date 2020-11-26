@@ -50,21 +50,82 @@
 			<div class="column" id="filter-products-by-status">
 				<button class="button-primary float-right" type="button" data-toggle="modal" data-target="#add-new-product"> Add New Product </button>
 			</div>
-			<!-- Modal -->
+			<!-- Add New Product Modal -->
 			<div id="add-new-product" class="modal fade" role="dialog">
 				<div class="modal-dialog">
-
 					<!-- Modal content-->
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Modal Header</h4>
+							<h4 class="modal-title">Add New Product</h4>
 						</div>
 						<div class="modal-body">
-							<p>Some text in the modal.</p>
+							<form>
+							<fieldset>
+								<label for="name">Name</label>
+								<input type="text" placeholder="Hat" id="name">
+								<label for="description">Description</label>
+								<textarea placeholder="Cool hat" id="description"></textarea>
+								<label for="categories">Categories</label>
+								<select id="categories">
+									<option value="0-13">Shirt</option>
+									<option value="14-17">Hat</option>
+									<option value="18-23">Mug</option>
+									<option value="24+">Pants</option>
+									<option value="24+">Keychain</option>
+									<option value="24+">Belt</option>
+								</select>
+								<label for="category">or Add new Category</label>
+								<input type="text" placeholder="New Category" id="category">
+								<label for="image">Images</label>
+								<input type="file" name="" value="Upload" multiple>								
+							</fieldset>
+							</form>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+							<input class="button-primary" type="submit" value="Save">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Edit Product Modal -->
+			<div id="edit-product" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Edit Tshirt</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+							<fieldset>
+								<label for="name">Name</label>
+								<input type="text" value="Tshirt" id="name">
+								<label for="description">Description</label>
+								<textarea id="description">Some Cool Description</textarea>
+								<label for="categories">Categories</label>
+								<select id="categories">
+									<option value="0-13">Shirt</option>
+									<option value="14-17">Hat</option>
+									<option value="18-23">Mug</option>
+									<option value="24+">Pants</option>
+									<option value="24+">Keychain</option>
+									<option value="24+">Belt</option>
+								</select>
+								<label for="category">or Add new Category</label>
+								<input type="text" placeholder="New Category" id="category">
+								<label for="image">Images</label>
+								<input type="file" name="" value="Upload" multiple>								
+							</fieldset>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+							<input class="button-primary" type="submit" value="Save">
 						</div>
 					</div>
 
@@ -91,7 +152,7 @@
 							<td>Tshirt</td>
 							<td>11</td>
 							<td>1000</td>
-							<td><input class="button button-clear float-right" type="submit" value="edit"></td>
+							<td><input class="button button-clear float-right" type="submit" value="edit" data-toggle="modal" data-target="#edit-product"></td>
 							<td><input class="button button-clear float-right" type="submit" value="delete"></td>
 						</tr>
 						<tr>
@@ -100,7 +161,7 @@
 							<td>Tshirt</td>
 							<td>11</td>
 							<td>1000</td>
-							<td><input class="button button-clear float-right" type="submit" value="edit"></td>
+							<td><input class="button button-clear float-right" type="submit" value="edit" data-toggle="modal" data-target="#edit-product"></td>
 							<td><input class="button button-clear float-right" type="submit" value="delete"></td>
 						</tr>
 					</tbody>
